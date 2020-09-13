@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Othello v2</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="app">
+        <div class="container">
+            <header class="text-center">
+                <h1>Othello v2</h1>
+                <p>Created by <a href="http://ahmadsaugi.com" target="_blank" rel="noopener noreferrer">Ahmad Saugi</a></p>
+            </header>
+            <div class="row">
+                <div class="col-9">
+                    <div class="card card-play">
+                        <div class="choose-color">
+                            <h2>Choose Your Color</h2>
+                            <div class="row">
+                                <div class="col-6">
+                                    <button type="button" class='btn btn-color btn-black' onclick="setPlayerColor('black')">
+                                        Black
+                                    </button>
+                                </div>
+                                <div class="col-6">
+                                    <button type="button" class='btn btn-color btn-white' onclick="setPlayerColor('white')">
+                                        White
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <canvas id="canvas" class='blur' width="600" height="600"></canvas>
+                        
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="card">
+                        <h2 class='text-center mb-4'>Score</h2>
+                        <table>
+                            <tr>
+                                <td>
+                                    <span class="cirlce-color "></span> You:
+                                </td>
+                                <td>
+                                    <span id="playerScore">0</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="cirlce-color "></span> Computer:
+                                </td>
+                                <td>
+                                    <span id="botScore">0</span>
+                                </td>
+                            </tr>
+                        </table>
+                        <div class="mb-4"></div>
+                        <hr class='mb-4'>
+                        <table>
+                            <tr>
+                                <td>
+                                    <span class="cirlce-color "></span> Highscore:
+                                </td>
+                                <td>
+                                    <span id="highScore">0</span>
+                                </td>
+                            </tr>
+                            
+                        </table>
+                        <div class="form-group mt-4">
+                            <input type="checkbox" id="with-sound"> 
+                            <label for="with-sound">With Sound</label>
+                        </div>
+                        <button class="btn btn-primary mt-4" id="btn-replay">
+                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-clockwise" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z"/>
+                                <path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z"/>
+                              </svg>
+                              Replay
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/Othello.js"></script>
+    <script src="js/Board.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
